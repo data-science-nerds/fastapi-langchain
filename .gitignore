@@ -133,6 +133,8 @@ venv.bak/
 # get pushed to github, so 
 # hardcoding path to venv
 fastapi-venv-new/
+fastapi-venv/
+
 
 # Spyder project settings
 .spyderproject
