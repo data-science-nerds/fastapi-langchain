@@ -17,7 +17,7 @@ uvicorn backend.api.main:app --host 0.0.0.0 --port 8080
 
   
 - to run locally, use command:
-  ```guvicorn backend.api.main:app --reload\n```
+  ```uvicorn backend.api.main:app --reload```
   and check page
   [http://127.0.0.1:8000/static/index.html](http://127.0.0.1:8000/static/index.html)
 

@@ -1,8 +1,9 @@
-langchain==0.0.162
-openai==0.27.7
-tiktoken==0.4.0
-pinecone-client[grpc]==2.2.1 # pip install "pinecone-client[grpc]"
-pinecone_datasets #=='0.5.0rc10'
+# These are for the notebook
+# langchain==0.0.162
+# openai==0.27.7
+# tiktoken==0.4.0
+# pinecone-client[grpc]==2.2.1 # pip install "pinecone-client[grpc]"
+# pinecone_datasets #=='0.5.0rc10'
 # note pydantic versioning causes errors
 # so must use python3.9 to 
 # get around that
@@ -19,7 +20,7 @@ attrs==23.1.0
 botocore==1.31.17
 cachetools==5.3.1
 certifi==2023.7.22
-charset-normalizer==3.2.0s
+charset-normalizer==3.2.0
 click==8.1.7
 dataclasses-json==0.5.14
 decorator==5.1.1
@@ -64,7 +65,7 @@ orjson==3.9.5
 packaging==23.1
 pandas==2.0.3
 pinecone-client==2.2.1
-pinecone-datasets==0.6.0
+# pinecone-datasets #==0.6.0
 protobuf==3.19.3
 pyarrow==11.0.0
 pyasn1==0.5.0
@@ -101,3 +102,4 @@ watchfiles==0.19.0
 websockets==11.0.3
 wrapt==1.15.0
 yarl==1.9.2
+pinecone_datasets
