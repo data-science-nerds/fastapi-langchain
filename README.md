@@ -28,47 +28,25 @@ uvicorn backend.api.main:app --host 0.0.0.0 --port 8080
 
 
 ### file structure
-fastapi-langchain/   
-
-
-│  
-
-├── backend/  
-
-│   ├── data/  
-
-│   │   └── processed/  
-
-│   │       └── documents/  
-
-│   │           └── parquet_df_with_metadata.parquet  
-
-│   │  
-
-│   ├── scripts/  
-
-│   │   ├── live_LLM.py  
-
-│   │   ├── ... [other scripts]  
-
-│   │  
-
-│   ├── api/  
-
-│   │   ├── main.py  # FastAPI main application file  
-
-│   │   ├── models/  # Pydantic models, if any  
-
-│   │   └── routers/  # Separate FastAPI routers, if you want to modularize endpoints  
-
-│   │  
-
-│   └── .env  # Contains environment variables  
-
-│  
-
-├── frontend/  
-
-│  
-
-└── requirements.txt  
+fastapi-langchain/  
+│
+├── backend/
+│   ├── data/
+│   │   └── processed/
+│   │       └── documents/
+│   │           └── parquet_df_with_metadata.parquet
+│   │
+│   ├── scripts/
+│   │   ├── live_LLM.py
+│   │   ├── ... [other scripts]
+│   │
+│   ├── api/
+│   │   ├── main.py  # FastAPI main application file
+│   │   ├── models/  # Pydantic models, if any
+│   │   └── routers/  # Separate FastAPI routers, if you want to modularize endpoints
+│   │
+│   └── .env  # Contains environment variables
+│
+├── frontend/
+│
+└── requirements.txt
