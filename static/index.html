@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+    <script>
+        function search() {
+            let query = document.getElementById('query').value;
+            
+            // Show loading message
+            document.getElementById('result').innerText = "Searching...";
+        
+            // Call the /ask/ route instead of /search/
+            fetch(`/ask/?query=${query}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Search failed");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Modify this to display the answer
+                    document.getElementById('result').innerText = "Answer: " + data.answer;
+                })
+                .catch(error => {
+                    document.getElementById('result').innerText = "An error occurred: " + error.message;
+                });
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="text" id="query">
+    <button onclick="search()">Search</button>
+    <p id="result"></p>
+</body>
+</html>
