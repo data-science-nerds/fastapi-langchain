@@ -86,75 +86,9 @@ llm = ChatOpenAI(
     )
 
 
-# def input_query(query):
-#     res = vectorstore.similarity_search(
-#         query,  # our search query
-#         k=10  # return 3 most relevant docs
-#     )
-#     print(f"COMPLETED input_query")
-#     return res
-
-# def similarity_search(query: str, k=3):
-#     # print(f"Your query:\n{query}")
-#     # [Place the vectorstore.similarity_search implementation here]
-#     results =  vectorstore.similarity_search(
-#         query,  # our search query
-#         k=10  # return 3 most relevant docs
-#     )
-#     # print(f"Your query:\n{query}")
-#     results = vectorstore.similarity_search(query, k=10)
-#     # print(f"Similarity search results:\n{results}")
-#     print("COMPLETED similarity_search")
-#     return results
-
-
-# def final_answer_with_sources(query: str):
-    # completion llm
-    # llm = ChatOpenAI(
-    #     openai_api_key=OPENAI_API_KEY,
-    #     model_name='gpt-3.5-turbo',
-    #     temperature=0.0
-    # )
-
-#     qa = RetrievalQA.from_chain_type(
-#         llm=llm,
-#         chain_type="stuff",
-#         retriever=vectorstore.as_retriever()
-#     )
-
-#     response = qa.run(query)
-#     print(f"COMPLETED final_answer_with_sources")
-#     return response #qa
-    
-# def qa_with_sources(query):
-#     res = RetrievalQAWithSourcesChain.from_chain_type(
-#         llm=llm,
-#         chain_type="stuff",
-#         retriever=vectorstore.as_retriever()
-#     )
-#     print("COMPLETED qa_with_sources")
-#     # print(f"{res}")
-#     return res
-
-
 if __name__ == "__main__":
-    # index_name = 'langchain-retrieval-augmentation-fast'
-    # indexname = index_name
-    # connect_to_pinecone(index_name)
-    # query = "How did Benito Mussolini affect Italy?"
     query = "Who has ruled Italy?"
     k = 3
-    # results = similarity_search(query, k)
-    # # qa = final_answer_with_sources(query)
-    # # response = qa.run(query)
-    # # print(f"QA run response:\n{response}")
-
-    # qa_with_sources_response = RetrievalQAWithSourcesChain.from_chain_type(
-    #     llm=llm,
-    #     chain_type="stuff",
-    #     retriever=vectorstore.as_retriever()
-    # )
-    # print(f"QA with sources response:\n{qa_with_sources_response}")
     vectorstore.similarity_search(
         query,  # our search query
         k=k  # return 3 most relevant docs
