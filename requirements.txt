@@ -60,7 +60,7 @@ numexpr==2.8.5
 numpy==1.25.2
 oauthlib==3.2.2
 openai==0.27.7
-openapi-schema-pydantic==1.2.4
+# openapi-schema-pydantic #==1.2.4
 orjson==3.9.5
 packaging==23.1
 pandas==2.0.3
@@ -70,10 +70,10 @@ protobuf==3.19.3
 pyarrow==11.0.0
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
-pydantic==1.10.12
-pydantic-extra-types==2.0.0
-pydantic-settings==2.0.3
-pydantic_core==2.6.0
+# pydantic==1.10.12
+# pydantic-extra-types==2.0.0
+# pydantic-settings==2.0.3
+# pydantic_core==2.6.0
 python-dateutil==2.8.2
 python-dotenv==1.0.0
 python-multipart==0.0.6
