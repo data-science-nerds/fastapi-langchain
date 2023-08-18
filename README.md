@@ -72,5 +72,3 @@ fastapi-langchain/
 │  
 
 └── requirements.txt  
-
-
