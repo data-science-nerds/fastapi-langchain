@@ -1,9 +1,25 @@
 # fastapi-langchain
 Showcase pydantic, fastapi, langchain, openai
 
+live web app running on:
+[http://54.198.111.198:8000/static/index.html](http://54.198.111.198:8000/static/index.html)
 # we use pydantic to validate:
 - all rows going into pinecone have data
 - all pinecone data cites a valid https link
+- the validation is done before the upsert
+- the data used here was validated in
+  scripts/pydantic_validation_langchain_retrieval_augmentation.ipynb
+  * they were only done once for upserting because once it is validated as a dataset before going into pinecone, we dont need to validate before upserting it again
+  * we would validate again if we were refreshing our pinecone embeddings with new data
+  
+- to run locally, use command:
+  ```guvicorn backend.api.main:app --reload\n```
+  and check page
+  [http://127.0.0.1:8000/static/index.html](http://127.0.0.1:8000/static/index.html)
+
+  to restart the local instance:
+  ```lsof -i :8000```
+  ```kill -9 <pid>```
 
 
 ### file structure
